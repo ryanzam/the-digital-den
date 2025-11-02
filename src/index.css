@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+    --color-dark-100: #f5f5f5;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #000;
+    color: var(--color-dark-100);
+    font-family: var(--font-semibold);
+}
+
+@layer components {
+    header {
+        @apply w-screen fixed top-0 left-0 z-50 flex items-center justify-center min-h-[7vh];
+
+        nav {
+            @apply container mx-auto flex items-center justify-between px-5 2xl:px-0;
+
+            img {
+                @apply cursor-pointer hover:-translate-y-0.5 transition-all duration-300 h-20;
+            }
+
+            button {
+                @apply bg-transparent px-6 py-2 rounded-full cursor-pointer hover:text-white/50 transition-all duration-300;
+            }
+
+            ul {
+                @apply flex items-center gap-8;
+
+                a {
+                    @apply hidden md:block font-medium text-sm cursor-pointer hover:text-white/50 transition-all duration-300;
+                }
+            }
+        }
+    }
+}
