@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@utility gradient-color {
+    @apply bg-gradient-to-r from-violet-700 from-10% via-red-500 via-50% to-violet-500 to-90%;
+}
+
+
 @theme {
     --color-dark-100: #f5f5f5;
 }
@@ -41,5 +46,29 @@ body {
                 }
             }
         }
+    }
+}
+
+#hero {
+    @apply h-fit lg:h-[80vh] flex flex-col justify-center items-center mt-40 lg:mt-50 2xl:mt-[7vh];
+
+    div {
+        @apply relative z-10 flex-col justify-center items-center lg:translate-y-10;
+
+        h1 {
+            @apply font-semibold lg:text-3xl 2xl:text-5xl gradient-color text-transparent bg-clip-text text-center;
+        }
+
+        p {
+            @apply mt-5 text-center text-sm lg:text-base 2xl:text-lg max-w-lg;
+        }
+
+        video {
+            @apply mx-auto lg:translate-y-5 2xl:translate-y-0;
+        }
+    }
+
+    button {
+        @apply relative z-10 gradient-color text-white py-2 px-6 mt-10 lg:mt-0 mb-5 rounded-full font-semibold text-lg cursor-pointer hover:bg-white hover:text-black transition-all duration-300 ease-in-out;
     }
 }
