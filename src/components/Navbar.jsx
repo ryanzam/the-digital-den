@@ -25,10 +25,10 @@ const Navbar = () => {
 
                 <div className="flex items-center justify-center gap-3">
                     <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <button>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i className="fa-solid fa-cart-shopping"></i>
                     </button>
                 </div>
             </nav>
