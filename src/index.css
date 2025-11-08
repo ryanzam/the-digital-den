@@ -93,3 +93,35 @@ body {
         }
     }
 }
+
+#display {
+    @apply relative my-20;
+
+    .media {
+        @apply relative lg:overflow-hidden;
+
+        video {
+            @apply w-full object-center object-cover;
+        }
+
+        .mask {
+            @apply absolute top-0 left-0 h-full;
+
+            img {
+                @apply h-full w-full opacity-0;
+            }
+        }
+    }
+
+    .content {
+        @apply flex my-20 items-center justify-center opacity-0 text-center;
+
+        h2 {
+            @apply font-bold text-3xl lg:text-4xl 2xl:text-7xl mb-5;
+        }
+
+        p {
+            @apply font-semibold lg:text-lg 2xl:text-lg max-w-2xl mx-auto text-neutral-400
+        }
+    }
+}
