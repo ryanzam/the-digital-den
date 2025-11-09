@@ -6,8 +6,8 @@ const Display = () => {
     useGSAP(() => {
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: '#display',
-                start: 'top top',
+                trigger: '.media',
+                start: 'top 50px',
                 end: 'bottom top',
                 scrub: true,
                 pin: true,
@@ -18,18 +18,11 @@ const Display = () => {
             .to('.mask img', {
                 transform: 'scale(1.5)',
                 opacity: 1
-            }).to('.content', { opacity: 1, y: 0, ease: 'power1.in' });
+            })
     }, [])
 
     return (
         <section id="display">
-            <div className="media">
-                <video src="earthspace.mp4" loop muted autoPlay playsInline />
-                <div className="mask">
-                    <img src="/logo.svg" />
-                </div>
-            </div>
-
             <div className="content">
                 <div className="wrapper">
                     <div >
@@ -44,6 +37,13 @@ const Display = () => {
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className="media">
+                <video src="earthspace.mp4" loop muted autoPlay playsInline />
+                <div className="mask">
+                    <img src="/logo.svg" />
                 </div>
             </div>
         </section>

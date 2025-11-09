@@ -1,4 +1,5 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const navLinks = [
     { label: "Deals" },
@@ -10,6 +11,25 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+
+    useGSAP(() => {
+        const header = gsap.timeline({
+            scrollTrigger: {
+                trigger: 'header',
+                start: 'bottom top',
+            }
+        })
+
+        header.fromTo('header', { backgroundColor: 'transparent' }
+            , {
+                backgroundColor: '#000000b3',
+                backgroundFilter: 'blur(50px)',
+                duration: 0.5,
+                ease: 'power1.inOut',
+            })
+
+    }, []);
+
     return (
         <header>
             <nav>
