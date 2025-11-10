@@ -28,7 +28,7 @@ const Display = () => {
                     <div >
                         <h2>Technology at your service</h2>
 
-                        <div className="space-y-5 mt-7 pe-10 ">
+                        <div className="space-y-5 mt-7">
                             <p>
                                 One stop marketplace for all your technological needs
                             </p>

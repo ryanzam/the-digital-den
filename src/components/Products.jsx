@@ -18,14 +18,24 @@ const Products = () => {
 
     return (
         <section id="products">
-            <h1>Check out our products</h1>
+            <h2>Check out our products</h2>
 
             <div className='buttons'>
-                <button className={`${selectedModel === "Phone" && "active"}`} onClick={() => handleModelSwitch('Phone')}>Phone</button>
-                <button className={`${selectedModel === "Laptop" && "active"}`} onClick={() => handleModelSwitch('Laptop')}>laptop</button>
-                <button className={`${selectedModel === "Pc" && "active"}`} onClick={() => handleModelSwitch('Pc')}>Gaming PC</button>
-                <button className={`${selectedModel === "Smartwatch" && "active"}`} onClick={() => handleModelSwitch('Smartwatch')}>Smart Watch</button>
-                <button className={`${selectedModel === "Vr" && "active"}`} onClick={() => handleModelSwitch('Vr')}>Vr Headset</button>
+                <button className={`${selectedModel === "Phone" && "active"}`} onClick={() => handleModelSwitch('Phone')}>
+                    <span>Phone</span>
+                </button>
+                <button className={`${selectedModel === "Laptop" && "active"}`} onClick={() => handleModelSwitch('Laptop')}>
+                    <span>Laptop</span>
+                </button>
+                <button className={`${selectedModel === "Pc" && "active"}`} onClick={() => handleModelSwitch('Pc')}>
+                    <span>PC</span>
+                </button>
+                <button className={`${selectedModel === "Smartwatch" && "active"}`} onClick={() => handleModelSwitch('Smartwatch')}>
+                    <span>Wearables</span>
+                </button>
+                <button className={`${selectedModel === "Vr" && "active"}`} onClick={() => handleModelSwitch('Vr')}>
+                    <span>VR</span>
+                </button>
             </div>
 
             <Canvas camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }} style={{ height: "70vh" }}>

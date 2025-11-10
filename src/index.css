@@ -75,20 +75,24 @@ body {
 }
 
 #products {
-    @apply container mx-auto px-5 2xl:px-0 min-h-[90vh] mt-30;
+    @apply container mx-auto px-5 2xl:px-0 min-h-[90vh] mt-20 lg:mt-30;
 
-    h1 {
-        @apply font-semibold text-4xl lg:text-5xl 2xl:text-7xl text-center mb-10;
+    h2 {
+        @apply font-semibold text-3xl lg:text-5xl 2xl:text-7xl text-center mb-10;
     }
 
     .buttons {
-        @apply flex justify-center items-center gap-5 mb-10;
+        @apply flex justify-center items-center gap-5 mb-10 w-full overflow-x-auto pl-40;
 
         button {
             @apply bg-transparent border border-white/50 px-5 py-2 rounded-full cursor-pointer hover:bg-violet-600/20 transition-all duration-300;
 
             &.active {
                 @apply gradient-color text-white;
+            }
+
+            span {
+                @apply text-xs lg:text-lg font-medium;
             }
         }
     }
@@ -127,10 +131,10 @@ body {
 }
 
 #show {
-    @apply w-dvw h-full overflow-hidden pt-20 lg:pt-20 flex flex-col items-center relative;
+    @apply w-dvw h-full overflow-hidden lg:pt-20 lg:pt-20 flex flex-col items-center relative;
 
     h2 {
-        @apply font-semibold text-3xl lg:text-6xl text-white max-w-2xl text-center pb-28;
+        @apply font-semibold text-2xl lg:text-6xl text-white max-w-2xl text-center lg:pb-28;
     }
 
     .wrapper {
@@ -175,6 +179,10 @@ footer {
 
     .links {
         @apply flex items-center justify-between gap-5 flex-wrap mb-5;
+
+        p {
+            @apply hidden md:block;
+        }
 
         a {
             @apply text-sm font-medium cursor-pointer hover:text-white/40 transition-all duration-300;
