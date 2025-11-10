@@ -130,11 +130,11 @@ body {
     @apply w-dvw h-full overflow-hidden pt-20 lg:pt-20 flex flex-col items-center relative;
 
     h2 {
-        @apply font-semibold text-3xl lg:text-6xl text-white max-w-2xl text-center;
+        @apply font-semibold text-3xl lg:text-6xl text-white max-w-2xl text-center pb-28;
     }
 
     .wrapper {
-        @apply w-7xl 2xl:w-[100rem] h-[50vh] lg:h-screen relative;
+        @apply w-7xl 2xl:w-[100rem] h-[50vh] lg:h-[80vh] relative;
 
         img {
             @apply max-w-40 lg:max-w-[27rem] 2xl:max-w-[35rem] object-cover object-center;
@@ -162,10 +162,38 @@ body {
     }
 
     .content {
-        @apply mx-auto max-w-xl my-10;
+        @apply mx-auto max-w-xl mb-20;
 
         p {
             @apply text-center translate-y-10 opacity-0 px-5 text-white;
+        }
+    }
+}
+
+footer {
+    @apply container mx-auto py-7 max-lg:px-5;
+
+    .links {
+        @apply flex items-center justify-between gap-5 flex-wrap mb-5;
+
+        a {
+            @apply text-sm font-medium cursor-pointer hover:text-white/40 transition-all duration-300;
+        }
+
+        ul {
+            @apply flex items-center gap-5 flex-wrap py-3 text-neutral-400;
+        }
+    }
+
+    .info {
+        @apply flex items-center justify-center gap-5 flex-wrap text-center text-neutral-400;
+
+        p {
+            @apply text-sm font-medium mb-3;
+
+            span {
+                @apply mx-0.5;
+            }
         }
     }
 }

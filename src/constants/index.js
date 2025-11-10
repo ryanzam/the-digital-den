@@ -33,3 +33,9 @@ export const imgPositions = [
         bottom: 50,
     }
 ];
+
+export const footerLinks = [
+    { label: "Privacy Policy", link: "#" },
+    { label: "Terms of Use", link: "#" },
+    { label: "Legal", link: "#" },
+    { label: "Contact", link: "#" },];
